@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIKAMEUGNI NGONGO ALLAN WILFRIED - Software Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio de SIKAMEUGNI NGONGO ALLAN WILFRIED, Élève Ingénieur en Génie Logiciel. Découvrez mes projets, compétences et flux de travail.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;800;900&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background overlay / Grid lines -->
+    <div class="grid-lines">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="role-badge" data-i18n="nav-role">INGÉNIEUR GÉNIE LOGICIEL</span>
+        </div>
+        <div class="nav-right">
+            <span class="availability-badge">
+                <span class="pulse-dot"></span>
+                <span data-i18n="nav-avail">DISPONIBLE POUR STAGES & COLLABORATIONS</span>
+            </span>
+            <div class="lang-selector">
+                <button class="lang-btn active" id="lang-fr">FR</button>
+                <span class="divider">/</span>
+                <button class="lang-btn" id="lang-en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Massive background portfolio text -->
+            <div class="hero-bg-text">PORTFOLIO</div>
+
+            <div class="hero-grid">
+                <!-- Left: Title and Subtitle -->
+                <div class="hero-info">
+                    <span class="greeting" data-i18n="hero-greeting">BONJOUR, JE SUIS</span>
+                    <h1 class="hero-name">
+                        <span class="name-line">SIKAMEUGNI</span>
+                        <span class="name-line">NGONGO</span>
+                        <span class="name-line highlight">ALLAN WILFRIED</span>
+                    </h1>
+                    <p class="hero-title" data-i18n="hero-title">ÉLÈVE INGÉNIEUR EN GÉNIE LOGICIEL</p>
+                    <p class="hero-desc" data-i18n="hero-desc">
+                        Je conçois et développe des solutions logicielles robustes et performantes, alliant architecture
+                        propre et code optimisé. De la conception système aux interfaces Web modernes, j'apporte
+                        rigueur, précision et évolutivité.
+                    </p>
+                </div>
+
+                <!-- Center: Profile Image Container with floating and 3D hover tilt -->
+                <div class="hero-photo-wrapper">
+                    <div class="hero-photo-card" id="profile-card">
+                        <div class="photo-glow"></div>
+                        <div class="photo-inner">
+                            <img src="C:\Users\allan\OneDrive\Documents\IMG-20260707-WA0341.jpg" alt="SIKAMEUGNI NGONGO ALLAN WILFRIED" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Stats Panel -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-label" data-i18n="stat-loc-label">LOCALISATION</span>
+                        <span class="stat-value" data-i18n="stat-loc-val">Cameroun</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label" data-i18n="stat-exp-label">FORMATION</span>
+                        <span class="stat-value" data-i18n="stat-exp-val">Génie Logiciel</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label" data-i18n="stat-avail-label">DISPONIBILITÉ</span>
+                        <span class="stat-value" data-i18n="stat-avail-val">Immédiate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section projects-section">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="projects-heading">PROJETS SÉLECTIONNÉS</h2>
+                <a href="https://github.com/allandev-up" target="_blank" class="view-all-link">
+                    <span data-i18n="projects-viewall">VOIR TOUS LES PROJETS</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 01 -->
+                <article class="project-card" data-index="01">
+                    <div class="project-num">01</div>
+                    <div class="project-content">
+                        <h3 class="project-title">NEXUS DB</h3>
+                        <p class="project-tech">Go / gRPC / Raft / BadgerDB</p>
+                        <p class="project-desc" data-i18n="proj1-desc">
+                            Base de données clé-valeur distribuée de haute performance implémentant le consensus Raft
+                            pour une tolérance totale aux pannes.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/AllanWilfried" target="_blank" class="proj-link">
+                            <span>GitHub</span>
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 02 -->
+                <article class="project-card" data-index="02">
+                    <div class="project-num">02</div>
+                    <div class="project-content">
+                        <h3 class="project-title">APEX COMPILER</h3>
+                        <p class="project-tech">Rust / LLVM / Assembly</p>
+                        <p class="project-desc" data-i18n="proj2-desc">
+                            Compilateur et machine virtuelle conçus pour optimiser et exécuter de manière sécurisée une
+                            syntaxe orientée objet stricte.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/AllanWilfried" target="_blank" class="proj-link">
+                            <span>GitHub</span>
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 03 -->
+                <article class="project-card" data-index="03">
+                    <div class="project-num">03</div>
+                    <div class="project-content">
+                        <h3 class="project-title">COLLABFLOW CI/CD</h3>
+                        <p class="project-tech">TypeScript / Docker / Kubernetes</p>
+                        <p class="project-desc" data-i18n="proj3-desc">
+                            Outil d'orchestration DevOps cloud-native pour automatiser le build, le test et le
+                            déploiement multi-cloud de microservices.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/AllanWilfried" target="_blank" class="proj-link">
+                            <span>GitHub</span>
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dynamic Grid Section: Workflow + Skills + Call To Action -->
+        <section class="details-grid-section">
+            <div class="details-layout">
+
+                <!-- Left Panel: My Workflow -->
+                <div class="workflow-panel">
+                    <h3 class="panel-heading" data-i18n="wf-heading">MON FLUX DE TRAVAIL</h3>
+                    <div class="workflow-steps">
+                        <div class="step-item">
+                            <div class="step-number">01</div>
+                            <div class="step-details">
+                                <h4 class="step-title" data-i18n="wf1-title">DÉCOUVRIR</h4>
+                                <p class="step-desc" data-i18n="wf1-desc">Analyse des exigences du système, des
+                                    contraintes techniques et planification d'architecture.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">02</div>
+                            <div class="step-details">
+                                <h4 class="step-title" data-i18n="wf2-title">CONCEVOIR</h4>
+                                <p class="step-desc" data-i18n="wf2-desc">Modélisation des bases de données,
+                                    architectures API (REST, gRPC) et flux de données.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">03</div>
+                            <div class="step-details">
+                                <h4 class="step-title" data-i18n="wf3-title">DÉVELOPPER</h4>
+                                <p class="step-desc" data-i18n="wf3-desc">Écriture d'un code propre, modulaire et
+                                    hautement performant avec les patterns adaptés.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">04</div>
+                            <div class="step-details">
+                                <h4 class="step-title" data-i18n="wf4-title">TESTER</h4>
+                                <p class="step-desc" data-i18n="wf4-desc">Couverture de tests unitaires, d'intégration
+                                    et analyses de performance/sécurité.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">05</div>
+                            <div class="step-details">
+                                <h4 class="step-title" data-i18n="wf5-title">DÉPLOYER</h4>
+                                <p class="step-desc" data-i18n="wf5-desc">Déploiement conteneurisé (Docker),
+                                    automatisation CI/CD et monitoring en production.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Panel: Skills & Expertise -->
+                <div class="skills-panel">
+                    <h3 class="panel-heading" data-i18n="skills-heading">COMPÉTENCES & EXPERTISE</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">
+                            <i data-lucide="layers" class="skill-icon"></i>
+                            <span data-i18n="s-arch">Architecture Système</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="database" class="skill-icon"></i>
+                            <span data-i18n="s-db">Modélisation BD</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="cpu" class="skill-icon"></i>
+                            <span data-i18n="s-backend">Développement Backend</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="globe" class="skill-icon"></i>
+                            <span data-i18n="s-frontend">Web & Frontend</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="git-branch" class="skill-icon"></i>
+                            <span data-i18n="s-devops">CI/CD & DevOps</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="shield-check" class="skill-icon"></i>
+                            <span data-i18n="s-quality">Clean Code & Qualité</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="terminal" class="skill-icon"></i>
+                            <span>Java / Go / Rust / Python</span>
+                        </div>
+                        <div class="skill-tag">
+                            <i data-lucide="code" class="skill-icon"></i>
+                            <span>Spring Boot / React / Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="award-box">
+                        <div class="award-icon-box">
+                            <i data-lucide="trophy"></i>
+                        </div>
+                        <div class="award-details">
+                            <h4 class="award-title" data-i18n="award-title">EXCELLENCE ACADÉMIQUE</h4>
+                            <p class="award-desc" data-i18n="award-desc">Formation d'Élite en ingénierie informatique et
+                                développement logiciel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Let's Collaborate (Interactive Contact Card) -->
+                <div class="collab-panel">
+                    <h3 class="panel-heading" data-i18n="collab-heading">COLLABORONS</h3>
+                    <div class="collab-box">
+                        <h4 class="collab-title" data-i18n="collab-title-text">UN PROJET EN TÊTE ?</h4>
+                        <p class="collab-desc" data-i18n="collab-desc-text">Je suis à l'écoute de toutes opportunités de
+                            stage, contrats freelance ou projets innovants.</p>
+
+                        <div class="contact-links-list">
+                            <a href="mailto:sikameugni.allan.wilfried@gmail.com" class="contact-item-link">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label" data-i18n="c-email">GMAIL</span>
+                                    <span class="contact-val">sikameugni.allan.wilfried@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/237689542333" target="_blank" class="contact-item-link">
+                                <div class="contact-icon whatsapp">
+                                    <i data-lucide="message-square"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">WHATSAPP</span>
+                                    <span class="contact-val">+237 689 54 23 33</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/AllanWilfried" target="_blank" class="contact-item-link">
+                                <div class="contact-icon github">
+                                    <i data-lucide="github"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">GITHUB</span>
+                                    <span class="contact-val">github.com/AllanWilfried</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-item-link static-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">LOCALISATION</span>
+                                    <span class="contact-val" data-i18n="c-loc">Yaoundé, Cameroun</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/237689542333" target="_blank" class="collab-cta-btn">
+                            <span data-i18n="collab-btn">DISCUTONS ENSEMBLE</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Quote Banner -->
+        <section class="quote-banner">
+            <span class="quote-symbol">“</span>
+            <p class="quote-text" data-i18n="quote-content">UN BON CODE NE S'ÉVALUE PAS SUR SON APPARENCE, MAIS SUR LA
+                QUALITÉ DE SON EXÉCUTION.</p>
+            <span class="quote-symbol">”</span>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <span class="connect-label" data-i18n="footer-connect">REJOIGNEZ-MOI</span>
+            <div class="social-icons">
+                <a href="https://github.com/allandev-up" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
+                <a href="https://wa.me/237689542333" target="_blank" title="WhatsApp"><i
+                        data-lucide="message-square"></i></a>
+                <a href="mailto:allancontrao7@gmail.com" title="Email"><i data-lucide="mail"></i></a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <a href="#" class="resume-download-btn">
+                <span data-i18n="footer-resume">TÉLÉCHARGER MON CV</span>
+                <i data-lucide="download"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
