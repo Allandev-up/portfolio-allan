@@ -110,3 +110,29 @@ document.querySelectorAll('[data-lang]').forEach(button => button.addEventListen
 let savedLanguage = 'fr';
 try { savedLanguage = localStorage.getItem('portfolio-lang') || 'fr'; } catch (_) {}
 setLanguage(savedLanguage);
+
+// One-time entrance animations. Content remains visible without JavaScript.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const revealTargets = document.querySelectorAll('.hero > div, .portrait, .section-top, .project, .about > div, .background article, .contact');
+const entranceAnimations = new Set();
+if ('IntersectionObserver' in window && typeof Element.prototype.animate === 'function') {
+ const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+   if (!entry.isIntersecting) return;
+   observer.unobserve(entry.target);
+   if (motionPreference.matches) return;
+   const animation = entry.target.animate([
+    { opacity: 0.35, translate: '0 18px' },
+    { opacity: 1, translate: '0 0' }
+   ], { duration: 620, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+   entranceAnimations.add(animation);
+   animation.finished.catch(() => {}).finally(() => entranceAnimations.delete(animation));
+  });
+ }, { threshold: 0.08 });
+ revealTargets.forEach(target => observer.observe(target));
+ motionPreference.addEventListener('change', event => {
+  if (event.matches) entranceAnimations.forEach(animation => animation.cancel());
+ });
+ // Keyboard navigation must never wait for an animation to finish.
+ document.addEventListener('focusin', () => entranceAnimations.forEach(animation => animation.finish()));
+}
