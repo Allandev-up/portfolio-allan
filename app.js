@@ -1,194 +1,112 @@
-// Bilingual Translations Dictionary
 const translations = {
-    fr: {
-        "nav-role": "INGÉNIEUR GÉNIE LOGICIEL",
-        "nav-avail": "DISPONIBLE POUR STAGES & COLLABORATIONS",
-        "hero-greeting": "BONJOUR, JE SUIS",
-        "hero-title": "ÉLÈVE INGÉNIEUR EN GÉNIE LOGICIEL",
-        "hero-desc": "Je conçois et développe des solutions logicielles robustes et performantes, alliant architecture propre et code optimisé. De la conception système aux interfaces Web modernes, j'apporte rigueur, précision et évolutivité.",
-        "stat-loc-label": "LOCALISATION",
-        "stat-loc-val": "Cameroun",
-        "stat-exp-label": "FORMATION",
-        "stat-exp-val": "Génie Logiciel",
-        "stat-avail-label": "DISPONIBILITÉ",
-        "stat-avail-val": "Immédiate",
-        "projects-heading": "PROJETS SÉLECTIONNÉS",
-        "projects-viewall": "VOIR TOUS LES PROJETS",
-        "proj1-desc": "Base de données clé-valeur distribuée de haute performance implémentant le consensus Raft pour une tolérance totale aux pannes.",
-        "proj2-desc": "Compilateur et machine virtuelle conçus pour optimiser et exécuter de manière sécurisée une syntaxe orientée objet stricte.",
-        "proj3-desc": "Outil d'orchestration DevOps cloud-native pour automatiser le build, le test et le déploiement multi-cloud de microservices.",
-        "wf-heading": "MON FLUX DE TRAVAIL",
-        "wf1-title": "DÉCOUVRIR",
-        "wf1-desc": "Analyse des exigences du système, des contraintes techniques et planification d'architecture.",
-        "wf2-title": "CONCEVOIR",
-        "wf2-desc": "Modélisation des bases de données, architectures API (REST, gRPC) et flux de données.",
-        "wf3-title": "DÉVELOPPER",
-        "wf3-desc": "Écriture d'un code propre, modulaire et hautement performant avec les patterns adaptés.",
-        "wf4-title": "TESTER",
-        "wf4-desc": "Couverture de tests unitaires, d'intégration et analyses de performance/sécurité.",
-        "wf5-title": "DÉPLOYER",
-        "wf5-desc": "Déploiement conteneurisé (Docker), automatisation CI/CD et monitoring en production.",
-        "skills-heading": "COMPÉTENCES & EXPERTISE",
-        "s-arch": "Architecture Système",
-        "s-db": "Modélisation BD",
-        "s-backend": "Développement Backend",
-        "s-frontend": "Web & Frontend",
-        "s-devops": "CI/CD & DevOps",
-        "s-quality": "Clean Code & Qualité",
-        "award-title": "EXCELLENCE ACADÉMIQUE",
-        "award-desc": "Formation d'Élite en ingénierie informatique et développement logiciel.",
-        "collab-heading": "COLLABORONS",
-        "collab-title-text": "UN PROJET EN TÊTE ?",
-        "collab-desc-text": "Je suis à l'écoute de toutes opportunités de stage, contrats freelance ou projets innovants.",
-        "c-email": "GMAIL",
-        "c-loc": "Yaoundé, Cameroun",
-        "collab-btn": "DISCUTONS ENSEMBLE",
-        "quote-content": "UN BON CODE NE S'ÉVALUE PAS SUR SON APPARENCE, MAIS SUR LA QUALITÉ DE SON EXÉCUTION.",
-        "footer-connect": "REJOIGNEZ-MOI",
-        "footer-resume": "TÉLÉCHARGER MON CV"
-    },
-    en: {
-        "nav-role": "SOFTWARE ENGINEER",
-        "nav-avail": "AVAILABLE FOR INTERNSHIPS & COLLABORATIONS",
-        "hero-greeting": "HI, I'M",
-        "hero-title": "SOFTWARE ENGINEERING STUDENT",
-        "hero-desc": "I design and build robust, high-performance software solutions, combining clean architecture with optimized code. From system design to modern Web interfaces, I bring rigor, precision, and scalability.",
-        "stat-loc-label": "LOCATION",
-        "stat-loc-val": "Cameroon",
-        "stat-exp-label": "EDUCATION",
-        "stat-exp-val": "Software Engineering",
-        "stat-avail-label": "DISPONIBILITY",
-        "stat-avail-val": "Immediate",
-        "projects-heading": "FEATURED PROJECTS",
-        "projects-viewall": "VIEW ALL PROJECTS",
-        "proj1-desc": "High-performance distributed key-value store implementing the Raft consensus protocol for absolute fault tolerance.",
-        "proj2-desc": "Custom compiler and virtual machine designed to optimize and securely execute a strict object-oriented syntax.",
-        "proj3-desc": "Cloud-native DevOps orchestration tool for automating microservice building, testing, and multi-cloud deployment.",
-        "wf-heading": "MY WORKFLOW",
-        "wf1-title": "DISCOVER",
-        "wf1-desc": "Analyzing system requirements, technical constraints, and architectural planning.",
-        "wf2-title": "ARCHITECT",
-        "wf2-desc": "Modeling databases, API schemas (REST, gRPC), and data communication pipelines.",
-        "wf3-title": "DEVELOP",
-        "wf3-desc": "Writing clean, modular, and highly-optimized code conforming to design patterns.",
-        "wf4-title": "TEST",
-        "wf4-desc": "Implementing comprehensive unit, integration, and load tests to evaluate reliability and security.",
-        "wf5-title": "DEPLOY",
-        "wf5-desc": "Containerized deployments (Docker), pipeline automation (CI/CD), and active production monitoring.",
-        "skills-heading": "SKILLS & EXPERTISE",
-        "s-arch": "System Architecture",
-        "s-db": "DB Modeling",
-        "s-backend": "Backend Development",
-        "s-frontend": "Web & Frontend",
-        "s-devops": "CI/CD & DevOps",
-        "s-quality": "Clean Code & Quality",
-        "award-title": "ACADEMIC EXCELLENCE",
-        "award-desc": "Elite training in computer engineering and software development.",
-        "collab-heading": "COLLABORATE",
-        "collab-title-text": "HAVE A PROJECT IN MIND?",
-        "collab-desc-text": "I am open to discussing internship opportunities, freelance gigs, or innovative projects.",
-        "c-email": "GMAIL",
-        "c-loc": "Yaounde, Cameroon",
-        "collab-btn": "LET'S DISCUSS TOGETHER",
-        "quote-content": "GOOD CODE IS NOT MEASURED BY ITS LOOKS, BUT BY THE QUALITY OF ITS EXECUTION.",
-        "footer-connect": "LET'S CONNECT",
-        "footer-resume": "DOWNLOAD MY RESUME"
-    }
+  "fr": {
+    "role": "Étudiant en génie logiciel",
+    "navProjects": "Projets",
+    "navAbout": "Parcours",
+    "navContact": "Contact",
+    "eyebrow": "YAOUNDÉ, CAMEROUN · IAI-CAMEROUN",
+    "headline": "Des idées utiles.<br>Du code concret.",
+    "intro": "Je suis Allan Wilfried, étudiant en 3e année de génie logiciel. Je développe des projets web avec React et Vite, et je renforce mes bases en Flutter pour créer des applications mobiles.",
+    "see": "Découvrir mes projets",
+    "contact": "Discutons ensemble",
+    "caption": "SIKAMEUGNI NGONGO ALLAN WILFRIED",
+    "captionSub": "Développement web & apprentissage mobile",
+    "projectsLabel": "01 / RÉALISATIONS",
+    "projectsTitle": "Ce que je construis.",
+    "projectsIntro": "Des projets personnels et académiques, et le code public de mon portfolio.",
+    "allRepos": "Explorer mon GitHub ↗",
+    "portfolioDesc": "Mon site personnel : présentation de mon parcours, de mes compétences et de mes projets. Une interface responsive en HTML, CSS et JavaScript.",
+    "source": "Voir le code ↗",
+    "personal": "Projet privé",
+    "details": "Présentation à venir",
+    "pioloDesc": "Projet cité dans mon parcours. Une présentation détaillée sera ajoutée prochainement.",
+    "aboutLabel": "02 / PARCOURS",
+    "aboutTitle": "Apprendre. Construire.<br>Progresser.",
+    "educationTitle": "Génie logiciel · 3e année",
+    "educationDesc": "IAI-Cameroun, Yaoundé. Formation en développement logiciel et réalisation de projets académiques.",
+    "internTitle": "Stage en développement",
+    "internDesc": "Dijital by Waslink. Participation au développement d’applications web et mobiles, à l’intégration de services backend et à la documentation technique.",
+    "skillsTitle": "Mes outils au quotidien",
+    "web": "Développement web",
+    "mobile": "Mobile · bases",
+    "tools": "Outils de développement",
+    "ai": "Assistants IA",
+    "languages": "Français : niveau soutenu · Anglais : A2",
+    "contactLabel": "03 / CONTACT",
+    "contactTitle": "Construisons la suite.",
+    "contactDesc": "À la recherche d’un stage en développement. Parlons de vos projets et de ce que je peux apporter à votre équipe.",
+    "email": "Écrire un e-mail ↗",
+    "cv": "Télécharger mon CV ↓",
+    "footer": "Conçu avec soin, depuis Yaoundé.",
+    "skip": "Aller au contenu",
+    "project1Desc": "Application mobile et web de recherche de logements et de mise en relation avec des prestataires de services immobiliers, notamment des électriciens. IA intégrée.",
+    "project2Desc": "Application conçue pour faciliter la prise en charge et la mise en relation des patients avec le personnel de santé. IA intégrée.",
+    "project3Desc": "Plateforme de recherche d’emploi assistée par intelligence artificielle.",
+    "project4Desc": "Plateforme avec IA intégrée pour aider les Camerounais à comprendre les lois et les procédures applicables aux situations qu’ils rencontrent."
+  },
+  "en": {
+    "role": "Software engineering student",
+    "navProjects": "Projects",
+    "navAbout": "Background",
+    "navContact": "Contact",
+    "eyebrow": "YAOUNDÉ, CAMEROON · IAI-CAMEROON",
+    "headline": "Useful ideas.<br>Real code.",
+    "intro": "I’m Allan Wilfried, a third-year software engineering student. I build web projects with React and Vite, and I am strengthening my Flutter foundations to create mobile applications.",
+    "see": "Explore my projects",
+    "contact": "Let’s talk",
+    "caption": "SIKAMEUGNI NGONGO ALLAN WILFRIED",
+    "captionSub": "Web development & learning mobile",
+    "projectsLabel": "01 / WORK",
+    "projectsTitle": "What I’m building.",
+    "projectsIntro": "Personal and academic projects, and the public source code of my portfolio.",
+    "allRepos": "Explore my GitHub ↗",
+    "portfolioDesc": "My personal website presenting my background, skills and projects. A responsive interface built with HTML, CSS and JavaScript.",
+    "source": "View source ↗",
+    "personal": "Private project",
+    "details": "Details coming soon",
+    "pioloDesc": "A project from my background. A detailed presentation will be added soon.",
+    "aboutLabel": "02 / BACKGROUND",
+    "aboutTitle": "Learn. Build.<br>Improve.",
+    "educationTitle": "Software engineering · Year 3",
+    "educationDesc": "IAI-Cameroon, Yaoundé. Software development studies and academic projects.",
+    "internTitle": "Development internship",
+    "internDesc": "Dijital by Waslink. Contributions to web and mobile applications, backend service integration and technical documentation.",
+    "skillsTitle": "Tools I work with",
+    "web": "Web development",
+    "mobile": "Mobile · foundations",
+    "tools": "Development tools",
+    "ai": "AI assistants",
+    "languages": "French: advanced · English: A2",
+    "contactLabel": "03 / CONTACT",
+    "contactTitle": "Let’s build what’s next.",
+    "contactDesc": "Looking for a development internship. Let’s discuss your projects and how I can contribute to your team.",
+    "email": "Send an email ↗",
+    "cv": "Download my CV (French) ↓",
+    "footer": "Made with care, from Yaoundé.",
+    "skip": "Skip to content",
+    "project1Desc": "A mobile and web application for finding housing and connecting with property service providers, including electricians. Includes AI features.",
+    "project2Desc": "An application designed to support patient care and connect patients with healthcare professionals. Includes AI features.",
+    "project3Desc": "An AI-assisted job search platform.",
+    "project4Desc": "A platform with AI features helping Cameroonians understand laws and procedures relevant to situations they encounter."
+  }
 };
-
-// Language Selector Logic
-const btnFr = document.getElementById("lang-fr");
-const btnEn = document.getElementById("lang-en");
-const htmlTag = document.documentElement;
-
-function setLanguage(lang) {
-    if (lang === "en") {
-        btnFr.classList.remove("active");
-        btnEn.classList.add("active");
-        htmlTag.setAttribute("lang", "en");
-    } else {
-        btnFr.classList.add("active");
-        btnEn.classList.remove("active");
-        htmlTag.setAttribute("lang", "fr");
-    }
-
-    // Translate all elements with data-i18n attributes
-    const elements = document.querySelectorAll("[data-i18n]");
-    elements.forEach(element => {
-        const key = element.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
-        }
-    });
-
-    localStorage.setItem("portfolio-lang", lang);
+function setLanguage(value) {
+ const lang = value === 'en' ? 'en' : 'fr';
+ document.documentElement.lang = lang;
+ document.querySelectorAll('[data-i18n]').forEach(el => {
+   const text = translations[lang][el.dataset.i18n];
+   if (text !== undefined) {
+     el.replaceChildren();
+     text.split('<br>').forEach((line, i) => {
+       if (i) el.append(document.createElement('br'));
+       el.append(document.createTextNode(line));
+     });
+   }
+ });
+ document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === lang)));
+ try { localStorage.setItem('portfolio-lang', lang); } catch (_) { /* Storage may be unavailable. */ }
 }
-
-btnFr.addEventListener("click", () => setLanguage("fr"));
-btnEn.addEventListener("click", () => setLanguage("en"));
-
-// Auto-load preferred language or fallback to browser language/French
-window.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("portfolio-lang");
-    if (savedLang) {
-        setLanguage(savedLang);
-    } else {
-        const browserLang = navigator.language.substring(0, 2);
-        if (browserLang === "en") {
-            setLanguage("en");
-        } else {
-            setLanguage("fr");
-        }
-    }
-    
-    // Initialize Lucide Icons
-    lucide.createIcons();
-});
-
-// Interactive 3D tilt effect on profile photo
-const profileCard = document.getElementById("profile-card");
-const photoInner = profileCard.querySelector(".photo-inner");
-
-profileCard.addEventListener("mousemove", (e) => {
-    const rect = profileCard.getBoundingClientRect();
-    
-    // Calculate cursor position relative to the element (from -0.5 to 0.5)
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    
-    // Degrees of rotation (max 15 degrees)
-    const rotateY = x * 20;
-    const rotateX = -y * 20;
-    
-    // Apply styling: translateZ keeps the image looking separated from the frame
-    photoInner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-    photoInner.style.transition = "transform 0.05s ease-out";
-});
-
-profileCard.addEventListener("mouseleave", () => {
-    // Reset rotations smoothly
-    photoInner.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
-    photoInner.style.transition = "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)";
-});
-
-// Interactive Hover for Project Cards (Subtle parallax rotation)
-const projectCards = document.querySelectorAll(".project-card");
-
-projectCards.forEach(card => {
-    card.addEventListener("mousemove", (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        
-        const rotateY = x * 8;
-        const rotateX = -y * 8;
-        
-        card.style.transform = `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        card.style.transition = "transform 0.05s ease-out, background-color 0.4s ease";
-    });
-    
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(0px) rotateX(0deg) rotateY(0deg)";
-        card.style.transition = "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease";
-    });
-});
+document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+let savedLanguage = 'fr';
+try { savedLanguage = localStorage.getItem('portfolio-lang') || 'fr'; } catch (_) {}
+setLanguage(savedLanguage);
